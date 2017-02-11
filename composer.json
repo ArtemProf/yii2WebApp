@@ -2,14 +2,19 @@
     "name": "art2pro/crmapp",
     "description": "Test web app based on book Web Application Development with Yii2",
     "type": "project",
+    "license": "public",
     "authors": [
         {
             "name": "Artem Drachkov",
             "email": "artem.prof@gmail.com"
         }
     ],
-    "require": {
+    "require-dev": {
         "codeception/codeception": "2.2.9",
-        "fzaninotto/faker": "1.6.0"
+        "fzaninotto/faker": "1.6.0",
+        "yiisoft/yii2": "*"
+    },
+    "require": {
+        "yiisoft/yii2": "*"
     }
 }
