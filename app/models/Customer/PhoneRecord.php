@@ -6,10 +6,15 @@
  * Time: 15:19
  */
 
-namespace models\Customer;
+namespace app\models\Customer;
 
+use yii\db\ActiveRecord;
 
-class PhoneRecord
+/**
+ * Class PhoneRecord
+ * @package app\models\Customer
+ */
+class PhoneRecord extends ActiveRecord
 {
     public static function tableName()
     {

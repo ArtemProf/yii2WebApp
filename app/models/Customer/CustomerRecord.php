@@ -10,6 +10,10 @@ namespace app\models\Customer;
 
 use yii\db\ActiveRecord;
 
+/**
+ * Class CustomerRecord
+ * @package app\models\Customer
+ */
 class CustomerRecord extends ActiveRecord
 {
     public static function tableName()

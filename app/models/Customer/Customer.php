@@ -1,6 +1,7 @@
 <?php
 
 namespace app\models\Customer;
+
 class Customer
 {
     /**

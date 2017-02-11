@@ -1,5 +1,6 @@
 <?php
 
+
     // Getting the configuration (2)
     define('BASE_PATH', dirname(__DIR__));
 
@@ -8,7 +9,7 @@
 
     require BASE_PATH.'/vendor/autoload.php';
     require BASE_PATH.'/vendor/yiisoft/yii2/Yii.php';
-    require BASE_PATH.'/app/config/bootstrap.php';
+//    require BASE_PATH.'/app/config/bootstrap.php';
     $config = require BASE_PATH.'/app/config/base.php';
 
     (new yii\web\Application( $config ))->run();

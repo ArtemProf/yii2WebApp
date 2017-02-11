@@ -11,4 +11,5 @@ class SiteController extends Controller
         $records = $this->getRecordsAccordingToQuery();
         $this->render('index', compact('records'));
     }
+
 }

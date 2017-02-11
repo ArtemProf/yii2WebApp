@@ -1,5 +1,5 @@
 <?php
 
 return [
-    '/' => '/SiteController/index',
+    '/' => 'customer/index'
 ];
