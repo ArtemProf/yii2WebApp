@@ -6,7 +6,7 @@ class CRMOperatorSteps extends \AcceptanceTester
 {
     public function amInAddCustomerUi()
     {
-        
+
         $this->amOnPage('/customer/add');
     }
 
@@ -24,7 +24,7 @@ class CRMOperatorSteps extends \AcceptanceTester
 
     public function fillCustomerDataForm($fieldsData)
     {
-        
+
         foreach ($fieldsData as $k => $v) {
             $this->fillField($k, $v);
         }
@@ -32,32 +32,31 @@ class CRMOperatorSteps extends \AcceptanceTester
 
     public function submitCustomerDataForm()
     {
-        
+
         $this->click('Submit');
     }
 
     public function seeIAmInListCustomersUi()
     {
-        
+
         $this->seeCurrentUrlMatches('/customers/');
     }
 
     public function amInListCustomersUi()
     {
-        
+
         $this->amOnPage('/customers');
     }
 
     public function amInQueryCustomerUi()
     {
-        
+
         $this->amOnPage('/customers/query');
     }
 
-
     public function fillInPhoneFieldWithDataFrom($customerData)
     {
-        
+
         $this->fillField(
             'PhoneRecord[number]',
             $customerData['PhoneRecord[number]']

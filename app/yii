@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+<?php
+    define('BASE_PATH', dirname(__DIR__));
+
+    require(BASE_PATH . '/vendor/autoload.php');
+    require(BASE_PATH . '/vendor/yiisoft/yii2/Yii.php');
+
+    $config = require(BASE_PATH . '/app/config/console.php');
+
+    $application = new yii\console\Application($config);
+    $exitCode = $application->run();
+
+    exit($exitCode);
