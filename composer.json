@@ -1,0 +1,14 @@
+{
+    "name": "art2pro/crmapp",
+    "description": "Test web app based on book Web Application Development with Yii2",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Artem Drachkov",
+            "email": "artem.prof@gmail.com"
+        }
+    ],
+    "require": {
+        "codeception/codeception": "*"
+    }
+}

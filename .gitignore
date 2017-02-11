@@ -1,6 +1,9 @@
-assets/*
-!assets/.gitignore
-protected/runtime/*
-!protected/runtime/.gitignore
-protected/data/*.db
-themes/classic/views/
+.gitignore
+.idea/
+composer.json
+vendor/
+
+tests/_output/*
+codeception.yml
+composer.lock
+tests/
