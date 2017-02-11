@@ -9,6 +9,7 @@
         }
     ],
     "require": {
-        "codeception/codeception": "*"
+        "codeception/codeception": "*",
+        "fzaninotto/faker": "*"
     }
 }

@@ -5,8 +5,9 @@
  * Date: 11/02/2017
  * Time: 11:58
  */
+use Step\Acceptance\CRMOperatorSteps;
 
-$I = new \AcceptanceTester\CRMOperatorSteps($scenario);
+$I = new CRMOperatorSteps($scenario);
 $I->wantTo('add two different customers to database');
 
 $I->amInAddCustomerUi();
@@ -23,7 +24,7 @@ $I->submitCustomerDataForm();
 
 $I->seeIAmInListCustomerUi();
 
-$I = new \AcceptanceTester\CRMOperatorSteps($scenario);
+$I = CRMOperatorSteps($scenario);
 $I->want('query the customer info using his phone number');
 
 $I->amInQueryCustomerUi();
