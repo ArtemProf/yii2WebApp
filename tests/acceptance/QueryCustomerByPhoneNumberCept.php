@@ -8,29 +8,29 @@
 use Step\Acceptance\CRMOperatorSteps;
 
 $I = new CRMOperatorSteps($scenario);
-$I->wantTo('add two different customers to database');
+$I->wantTo('add two different Customers to database');
 
-$I->amInAddCustomerUi();
-$firstCustomer = $I->imagineCustomer();
-$I->fillCustomerDataForm($firstCustomer);
-$I->submitCustomerDataForm();
+$I->amInAddCustomersUi();
+$firstCustomers = $I->imagineCustomers();
+$I->fillCustomersDataForm($firstCustomers);
+$I->submitCustomersDataForm();
 
-$I->seeIAmInListCustomerUi();
+$I->seeIAmInListCustomersUi();
 
-$I->amInAddCustomerUi();
-$secondCustomer = $I->imagineCustomer();
-$I->fillCustomerDataForm($secondCustomer);
-$I->submitCustomerDataForm();
+$I->amInAddCustomersUi();
+$secondCustomers = $I->imagineCustomers();
+$I->fillCustomersDataForm($secondCustomers);
+$I->submitCustomersDataForm();
 
-$I->seeIAmInListCustomerUi();
+$I->seeIAmInListCustomersUi();
 
-$I = CRMOperatorSteps($scenario);
-$I->want('query the customer info using his phone number');
+$I = new CRMOperatorSteps($scenario);
+$I->wantTo('query the Customers info using his phone number');
 
-$I->amInQueryCustomerUi();
-$I->fillInPhoneFiledWithDataFrom($firstCustomer);
+$I->amInQueryCustomersUi();
+$I->fillInPhoneFieldWithDataForm($firstCustomers);
 $I->clickSearchButton();
 
-$I->seeIAmInListCustomerUi();
-$I->seeCustomerInList($firstCustomer);
-$I->dontSeeCustomerInList($secondCustomer);
+$I->seeIAmInListCustomersUi();
+$I->seeCustomersInList($firstCustomers);
+$I->dontSeeCustomersInList($secondCustomers);

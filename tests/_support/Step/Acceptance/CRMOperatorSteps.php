@@ -4,35 +4,33 @@ namespace Step\Acceptance;
 
 class CRMOperatorSteps extends \AcceptanceTester
 {
-    public function amInAddCustomerUi()
+    public function amInAddCustomersUi()
     {
 
-        $this->amOnPage('/customer/add');
+        $this->amOnPage('/customers/add');
     }
 
-    public function imagineCustomer()
+    public function imagineCustomers()
     {
         $faker = \Faker\Factory::create();
 
         return [
-            'CustomerRecord[name]'      => $faker->name,
-            'CustomerRecord[birthDate]' => $faker->date('Y-m-d'),
-            'CustomerRecord[notes]'     => $faker->sentence(0),
-            'PhoneRecord[number]'       => $faker->phoneNumber,
+            'input[name*=name]'      => $faker->name,
+            'input[name*=birthDate]' => $faker->date('Y-m-d'),
+            'input[name*=notes]'     => $faker->sentence(0),
+            'input[name*=number]'    => $faker->phoneNumber,
         ];
     }
 
-    public function fillCustomerDataForm($fieldsData)
+    public function fillCustomersDataForm($fieldsData)
     {
-
         foreach ($fieldsData as $k => $v) {
             $this->fillField($k, $v);
         }
     }
 
-    public function submitCustomerDataForm()
+    public function submitCustomersDataForm()
     {
-
         $this->click('Submit');
     }
 
@@ -48,18 +46,16 @@ class CRMOperatorSteps extends \AcceptanceTester
         $this->amOnPage('/customers');
     }
 
-    public function amInQueryCustomerUi()
+    public function amInQueryCustomersUi()
     {
-
         $this->amOnPage('/customers/query');
     }
 
-    public function fillInPhoneFieldWithDataFrom($customerData)
+    public function fillInPhoneFieldWithDataForm($customersData)
     {
-
         $this->fillField(
-            'PhoneRecord[number]',
-            $customerData['PhoneRecord[number]']
+            'input[name*=phoneNumber]',
+            $customersData['input[name*=number]']
         );
     }
 
@@ -68,14 +64,14 @@ class CRMOperatorSteps extends \AcceptanceTester
         $this->click('Search');
     }
 
-    public function seeCustomerInList($customerData)
+    public function seeCustomersInList($customersData)
     {
-        $this->see($customerData['CustomerRecord[name]'], '#searchResults');
+        $this->see($customersData['input[name*=name]'], '#search_results');
     }
 
-    public function dontSeeCustomerInList($customerData)
+    public function dontSeeCustomersInList($customersData)
     {
-        $this->see($customerData['CustomerRecord[name]'], '#searchResults');
+        $this->dontSee($customersData['input[name*=name]'], '#search_results');
     }
 
 }
