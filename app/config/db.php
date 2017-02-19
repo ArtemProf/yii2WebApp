@@ -5,7 +5,7 @@ if(file_exists(__DIR__.DIRECTORY_SEPARATOR."db.local.php"))
 else
     $db = [
         'class' => 'yii\db\Connection',
-        'dsn' => 'mysql:host=localhost;dbname=buduguru',
+        'dsn' => 'mysql:host=localhost;dbname=crmapp',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
