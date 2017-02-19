@@ -8,11 +8,24 @@
 
 namespace app\models\Customer;
 
-
+/**
+ * Class Phone
+ * @package app\models\Customer
+ * @property integer number
+ */
 class Phone
 {
     /**
-     * @var stringn
+     * @var string
      */
-    public $name;
+    public $number;
+
+    /**
+     * Phone constructor.
+     * @param $number
+     */
+    public function __construct($number)
+    {
+        $this->number = $number;
+    }
 }

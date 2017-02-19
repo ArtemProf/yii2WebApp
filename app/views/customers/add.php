@@ -14,7 +14,7 @@ use app\models\Customer\PhoneRecord;
  * @var PhoneRecord $phone
  */
 $form = ActiveForm::begin([
-    'id' => 'form-input-example',
+    'id' => 'add-customer-form',
     'options' => [
         'class' => 'form-horizontal col-lg-11',
     ],

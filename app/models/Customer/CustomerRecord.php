@@ -13,6 +13,10 @@ use yii\db\ActiveRecord;
 /**
  * Class CustomerRecord
  * @package app\models\Customer
+ * @property integer id
+ * @property string name
+ * @property date birthDate
+ * @property string notes
  */
 class CustomerRecord extends ActiveRecord
 {
@@ -24,8 +28,8 @@ class CustomerRecord extends ActiveRecord
     public function rules()
     {
         return [
-            ['id', 'number'],
             ['name', 'required'],
+            ['id', 'number'],
             ['name', 'string', 'max' => 256],
             ['birthDate', 'date', 'format' => 'Y-m-d'],
             ['notes', 'safe']

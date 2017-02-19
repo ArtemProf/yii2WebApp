@@ -13,6 +13,8 @@ use yii\db\ActiveRecord;
 /**
  * Class PhoneRecord
  * @package app\models\Customer
+ * @property integer customerId
+ * @property string number
  */
 class PhoneRecord extends ActiveRecord
 {
